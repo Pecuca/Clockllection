@@ -1,0 +1,22 @@
+.block-clock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 8px);
+  gap: 2px;
+}
+
+.row span {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 2px;
+}
+
+.row span.filled {
+  background: #4caf50;
+}

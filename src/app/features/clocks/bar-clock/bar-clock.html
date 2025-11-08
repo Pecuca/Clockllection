@@ -1,0 +1,16 @@
+<div class="bar-clock">
+  <div class="bar">
+    <div class="fill" [style.width.%]="getPercent(time.getHours() % 12, 12)"></div>
+    <span>Hours: {{ time.getHours() }}</span>
+  </div>
+
+  <div class="bar">
+    <div class="fill" [style.width.%]="getPercent(time.getMinutes(), 60)"></div>
+    <span>Minutes: {{ time.getMinutes() }}</span>
+  </div>
+
+  <div class="bar">
+    <div class="fill" [style.width.%]="getPercent(time.getSeconds(), 60)"></div>
+    <span>Seconds: {{ time.getSeconds() }}</span>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<svg viewBox="0 0 100 100" class="analog-clock">
+  <!-- círculo exterior -->
+  <circle cx="50" cy="50" r="48" stroke="black" stroke-width="2" fill="white"/>
+
+  <!-- manecilla de horas -->
+  <line x1="50" y1="50" x2="50" y2="30"
+        [attr.transform]="'rotate(' + getRotation(time.getHours()%12,12) + ' 50 50)'"
+        stroke="black" stroke-width="3"/>
+
+  <!-- manecilla de minutos -->
+  <line x1="50" y1="50" x2="50" y2="20"
+        [attr.transform]="'rotate(' + getRotation(time.getMinutes(),60) + ' 50 50)'"
+        stroke="blue" stroke-width="2"/>
+
+  <!-- manecilla de segundos -->
+  <line x1="50" y1="50" x2="50" y2="15"
+        [attr.transform]="'rotate(' + getRotation(time.getSeconds(),60) + ' 50 50)'"
+        stroke="red" stroke-width="1"/>
+</svg>

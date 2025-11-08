@@ -1,0 +1,53 @@
+<div class="toolbar">
+  <label>
+    Offset (s):
+    <input type="range" min="-3600" max="3600" step="1"
+           [value]="offsetSeconds"
+           (input)="onOffsetChange($event)" />
+    <span>{{ offsetSeconds }}s</span>
+  </label>
+</div>
+
+<div class="viewer">
+  <app-digital-clock></app-digital-clock>
+</div>
+
+<div class="viewer">
+  <app-digital-clock *ngIf="selected === 'digital'"></app-digital-clock>
+  <app-analog-clock *ngIf="selected === 'analog'"></app-analog-clock>
+</div>
+
+<div class="toolbar">
+  <label>
+    Visualizador:
+    <select [value]="selected" (change)="onVisualizerChange(($event.target as HTMLSelectElement).value)">
+      <option *ngFor="let v of visualizers" [value]="v.key">{{ v.label }}</option>
+    </select>
+  </label>
+
+  <label style="margin-left: 16px;">
+    Offset (s):
+    <input type="range" min="-3600" max="3600" step="1"
+           [value]="offsetSeconds"
+           (input)="onOffsetChange($event)" />
+    <span>{{ offsetSeconds }}s</span>
+  </label>
+</div>
+
+<ng-container [ngSwitch]="selected">
+  <app-digital-clock *ngSwitchCase="'digital'"></app-digital-clock>
+  <app-analog-clock *ngSwitchCase="'analog'"></app-analog-clock>
+  <app-bar-clock *ngSwitchCase="'bars'"></app-bar-clock>
+</ng-container>
+
+<app-rings-clock *ngSwitchCase="'rings'"></app-rings-clock>
+
+<app-color-clock *ngSwitchCase="'color'"></app-color-clock>
+<app-block-clock *ngSwitchCase="'blocks'"></app-block-clock>
+
+<div class="viewer">
+  <ng-container [ngSwitch]="selected">
+    <app-digital-clock *ngSwitchCase="'digital'"></app-digital-clock>
+    <app-analog-clock *ngSwitchCase="'analog'"></app-analog-clock>
+  </ng-container>
+</div>
