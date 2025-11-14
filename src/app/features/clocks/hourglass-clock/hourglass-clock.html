@@ -1,0 +1,18 @@
+<div class="hourglass">
+  <!-- Triángulo superior -->
+  <div class="triangle top">
+    <div class="sand" [style.height.%]="(1 - getSecondProgress()) * 100"></div>
+  </div>
+
+  <!-- Conexión -->
+  <div class="neck"></div>
+
+  <!-- Triángulo inferior -->
+  <div class="triangle bottom">
+    <div class="sand" [style.height.%]="getSecondProgress() * 100"></div>
+  </div>
+
+  <div class="label">
+    {{ time.getHours() }}:{{ time.getMinutes() }}:{{ time.getSeconds() }}
+  </div>
+</div>

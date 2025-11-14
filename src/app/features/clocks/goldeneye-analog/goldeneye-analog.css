@@ -1,0 +1,40 @@
+.goldeneye-analog {
+  background: black;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  padding: 20px;
+  border: 2px solid #00ff00;
+  width: 300px;
+  text-align: center;
+}
+
+.analog-face {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.status-bars {
+  margin-top: 10px;
+}
+
+.bar {
+  height: 10px;
+  margin: 4px 0;
+}
+
+.bar.day {
+  background: linear-gradient(90deg, red, darkred);
+}
+
+.bar.month {
+  background: linear-gradient(90deg, cyan, darkblue);
+}
+
+.labels {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,24 @@
+<div class="sonar-clock">
+  <svg viewBox="0 0 100 100" class="radar">
+    <!-- Círculo del radar -->
+    <circle cx="50" cy="50" r="48" stroke="lime" stroke-width="2" fill="black"/>
+
+    <!-- Barrido -->
+    <line x1="50" y1="50" x2="95" y2="50"
+          [attr.transform]="'rotate(' + getSweepRotation() + ' 50 50)'"
+          stroke="lime" stroke-width="2"/>
+
+    <!-- Puntos -->
+    <circle *ngFor="let p of getRadarPoints()" [attr.cx]="p.x" [attr.cy]="p.y" r="2" fill="lime"/>
+  </svg>
+
+  <!-- Barra de batería -->
+  <div class="battery">
+    <div class="level" [style.width.%]="getBatteryLevel()"></div>
+  </div>
+
+  <div class="labels">
+    <span>{{ time | date:'HH:mm:ss' }}</span>
+    <span>Batería del día</span>
+  </div>
+</div>

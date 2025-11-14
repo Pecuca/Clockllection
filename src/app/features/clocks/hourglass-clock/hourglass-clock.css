@@ -1,0 +1,53 @@
+.hourglass {
+  width: 120px;
+  margin: 20px auto;
+  text-align: center;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.triangle {
+  width: 0;
+  margin: auto;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  position: relative;
+}
+
+.triangle.top {
+  border-bottom: 60px solid #ccc;
+  height: 60px;
+}
+
+.triangle.bottom {
+  border-top: 60px solid #ccc;
+  height: 60px;
+}
+
+.sand {
+  position: absolute;
+  left: -60px;
+  right: -60px;
+  background: goldenrod;
+  transition: height 0.5s ease;
+}
+
+.triangle.top .sand {
+  bottom: 0;
+}
+
+.triangle.bottom .sand {
+  top: 0;
+}
+
+.neck {
+  width: 4px;
+  height: 10px;
+  background: goldenrod;
+  margin: auto;
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 14px;
+}
