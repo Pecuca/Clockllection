@@ -1,0 +1,12 @@
+<div class="swarm-clock">
+  <svg viewBox="0 0 200 100" class="swarm-canvas">
+    <rect x="0" y="0" width="200" height="100" fill="transparent"></rect>
+    <g>
+      <circle *ngFor="let p of particles" class="particle" [attr.cx]="p.x" [attr.cy]="p.y" r="2.2" fill="#1e88e5"></circle>
+    </g>
+  </svg>
+  <div class="swarm-info">
+    <div class="swarm-time">{{ time | date:'HH:mm' }}</div>
+    <div class="swarm-hint">Particle Swarm Clock</div>
+  </div>
+</div>

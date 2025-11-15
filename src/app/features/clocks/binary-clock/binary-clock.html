@@ -1,0 +1,25 @@
+<div class="binary-clock">
+  <div class="row">
+    <span class="label">H</span>
+    <div class="bits">
+      <span *ngFor="let b of getBits().hours" class="bit" [class.on]="b===1"></span>
+    </div>
+    <div class="value">{{ time | date:'HH' }}</div>
+  </div>
+
+  <div class="row">
+    <span class="label">M</span>
+    <div class="bits">
+      <span *ngFor="let b of getBits().minutes" class="bit" [class.on]="b===1"></span>
+    </div>
+    <div class="value">{{ time | date:'mm' }}</div>
+  </div>
+
+  <div class="row">
+    <span class="label">S</span>
+    <div class="bits">
+      <span *ngFor="let b of getBits().seconds" class="bit" [class.on]="b===1"></span>
+    </div>
+    <div class="value">{{ time | date:'ss' }}</div>
+  </div>
+</div>

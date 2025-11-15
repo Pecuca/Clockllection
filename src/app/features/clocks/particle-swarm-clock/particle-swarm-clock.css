@@ -1,0 +1,6 @@
+.swarm-clock{ background:#fff; color:#111; padding:8px; width:300px; border:1px solid #e6e6e6 }
+.swarm-canvas{ width:240px; height:120px; display:block; margin:auto }
+.particle{ transition: opacity 0.2s linear }
+.swarm-info{ padding-top:8px; display:flex; justify-content:space-between; font-size:12px; color:#444 }
+.swarm-time{ font-weight:700 }
+.swarm-hint{ opacity:0.7 }

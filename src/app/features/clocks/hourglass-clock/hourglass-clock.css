@@ -1,0 +1,44 @@
+.hourglass {
+  width: 140px;
+  margin: 20px auto;
+  text-align: center;
+  /* use default font */
+  color: #333;
+}
+
+.bulb {
+  width: 140px;
+  height: 90px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.04);
+  background: var(--card);
+}
+
+.bulb.top {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.bulb.bottom {
+  margin-top: -10px;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.bulb .sand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #d4a017;
+  transition: height 400ms linear;
+}
+
+.neck {
+  text-align: center;
+  font-size: 18px;
+  color: #d4a017;
+  margin: -6px 0 6px 0;
+}
+
+.label { margin-top: 8px; font-size: 14px; }

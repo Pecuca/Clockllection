@@ -1,0 +1,39 @@
+<div class="dashboard-grid">
+  <section>
+    <div class="controls">
+      <div class="offset-control">
+        <label>Offset (s)</label>
+        <!-- Expanded range: allow up to +/- 24 hours (86400 seconds) -->
+        <input type="range" min="-86400" max="86400" step="1" [value]="offsetSeconds" (input)="onOffsetChange($event)" />
+        <span style="min-width:64px">{{ offsetSeconds }}s</span>
+        <button class="reset-btn" (click)="resetOffset()">Reset</button>
+      </div>
+
+      <div style="margin-left:auto;display:flex;align-items:center;gap:12px">
+        <label>Visualizador</label>
+        <select [value]="selected" (change)="onVisualizerChange($any($event.target).value)">
+          <option *ngFor="let v of visualizers" [value]="v.key">{{ v.label }}</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Logout button fixed top-right -->
+    <button class="logout-top btn-logout-style" (click)="logout()">Log Out</button>
+
+    <div class="viewer">
+      <ng-container [ngSwitch]="selected">
+        <app-digital-clock *ngSwitchCase="'digital'"></app-digital-clock>
+        <!-- analog removed -->
+        <app-bar-clock *ngSwitchCase="'bars'"></app-bar-clock>
+        <app-rings-clock *ngSwitchCase="'rings'"></app-rings-clock>
+        <app-color-clock *ngSwitchCase="'color'"></app-color-clock>
+        <app-block-clock *ngSwitchCase="'blocks'"></app-block-clock>
+        <app-typographic-clock *ngSwitchCase="'typographic'"></app-typographic-clock>
+        <app-progress-day *ngSwitchCase="'progress'"></app-progress-day>
+        <app-hourglass-clock *ngSwitchCase="'hourglass'"></app-hourglass-clock>
+        <app-particle-swarm-clock *ngSwitchCase="'swarm'"></app-particle-swarm-clock>
+        <app-binary-clock *ngSwitchCase="'binary'"></app-binary-clock>
+      </ng-container>
+    </div>
+  </section>
+</div>

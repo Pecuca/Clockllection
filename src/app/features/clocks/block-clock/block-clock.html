@@ -1,0 +1,14 @@
+<div class="block-clock">
+  <div class="row">
+    <span *ngFor="let filled of getBlocks(time.getHours()%12, 12)"
+          [class.filled]="filled"></span>
+  </div>
+  <div class="row">
+    <span *ngFor="let filled of getBlocks(time.getMinutes(), 60)"
+          [class.filled]="filled"></span>
+  </div>
+  <div class="row">
+    <span *ngFor="let filled of getBlocks(time.getSeconds(), 60)"
+          [class.filled]="filled"></span>
+  </div>
+</div>

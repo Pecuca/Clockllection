@@ -1,0 +1,8 @@
+<div class="digital-clock">
+	<div class="time">
+		{{ format(time.getHours()) }}:{{ format(time.getMinutes()) }}:{{ format(time.getSeconds()) }}
+	</div>
+	<div class="date">
+		{{ time | date:'EEEE, d MMMM yyyy' }}
+	</div>
+</div>

@@ -1,0 +1,10 @@
+.block-clock{
+  display:flex;flex-direction:column;gap:8px;align-items:center;
+}
+
+.row{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:640px}
+
+.row span{width:14px;height:14px;background:#e6f4ff;border-radius:3px;display:inline-block;border:1px solid #d0eaff}
+.row span.filled{background:#1e88e5;box-shadow:none;border-color:#1b76c9}
+
+.row span.empty { opacity: 0.6 }

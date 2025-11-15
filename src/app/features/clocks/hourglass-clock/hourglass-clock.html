@@ -1,0 +1,13 @@
+<div class="hourglass">
+  <div class="bulb top">
+    <div class="sand" [style.height.%]="(1 - getSecondProgress()) * 100"></div>
+  </div>
+
+  <div class="neck">&#x25CF;</div>
+
+  <div class="bulb bottom">
+    <div class="sand" [style.height.%]="getSecondProgress() * 100"></div>
+  </div>
+
+  <div class="label">{{ time | date:'HH:mm:ss' }}</div>
+</div>

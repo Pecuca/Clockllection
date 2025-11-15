@@ -1,0 +1,11 @@
+.rings-clock {
+  width: 200px;
+  height: 200px;
+  transform: rotate(-90deg); /* para que empiece arriba */
+}
+
+.rings-labels {
+  text-align: center;
+  margin-top: 10px;
+  /* use default font */
+}

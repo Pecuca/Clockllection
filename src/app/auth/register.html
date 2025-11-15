@@ -1,0 +1,27 @@
+<div class="auth-card">
+  <h2>Crear cuenta</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="auth-field">
+      <label>Nombre</label>
+      <input type="text" [(ngModel)]="username" name="username" required />
+    </div>
+
+    <div class="auth-field">
+      <label>Correo</label>
+      <input type="email" [(ngModel)]="email" name="email" required />
+    </div>
+
+    <div class="auth-field">
+      <label>Contraseña</label>
+      <input type="password" [(ngModel)]="password" name="password" required />
+    </div>
+
+    <div class="auth-actions">
+      <button class="btn-logout-style" type="submit">Registrar</button>
+      <button class="btn-logout-style" type="button" (click)="goLogin()">Volver a iniciar</button>
+    </div>
+
+    <p class="error" *ngIf="error" style="color:#ffb4b4;margin-top:8px">{{ error }}</p>
+    <p class="success" *ngIf="success" style="color:#b6f5c8;margin-top:8px">{{ success }}</p>
+  </form>
+</div>

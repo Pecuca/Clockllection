@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 200" class="rings-clock">
+  <!-- Horas -->
+  <circle cx="100" cy="100" r="80"
+          stroke="#4caf50" stroke-width="12" fill="none"
+          [attr.stroke-dasharray]="getPercent(time.getHours()%12,12) + ',100'"/>
+
+  <!-- Minutos -->
+  <circle cx="100" cy="100" r="60"
+          stroke="#2196f3" stroke-width="10" fill="none"
+          [attr.stroke-dasharray]="getPercent(time.getMinutes(),60) + ',100'"/>
+
+  <!-- Segundos -->
+  <circle cx="100" cy="100" r="40"
+          stroke="#f44336" stroke-width="8" fill="none"
+          [attr.stroke-dasharray]="getPercent(time.getSeconds(),60) + ',100'"/>
+</svg>
+
+<div class="rings-labels">
+  <div>Hours: {{ time.getHours() }}</div>
+  <div>Minutes: {{ time.getMinutes() }}</div>
+  <div>Seconds: {{ time.getSeconds() }}</div>
+</div>

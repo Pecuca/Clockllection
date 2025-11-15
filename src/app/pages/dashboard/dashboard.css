@@ -1,0 +1,20 @@
+/* Dashboard layout styles */
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:12px}
+.toolbar .brand{font-weight:600}
+.sidebar .visualizer-list{display:flex;flex-direction:column;gap:8px}
+.visualizer-item{padding:8px;border-radius:8px;color:var(--muted);cursor:pointer}
+.visualizer-item.active{background:rgba(255,255,255,0.02);color:#fff}
+.viewer{min-height:340px;display:flex;align-items:center;justify-content:center}
+.controls{display:flex;align-items:center;gap:16px}
+.offset-control{display:flex;align-items:center;gap:8px}
+.reset-btn{padding:8px 10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.sidebar{padding:12px}
+
+/* Dashboard-specific color polish */
+.controls select{background:transparent;border:1px solid rgba(0,0,0,0.08);color:#000;padding:8px;border-radius:8px}
+.reset-btn{background:#374151;border:1px solid rgba(0,0,0,0.2);color:#fff}
+.reset-btn:hover{background:#4b5563;transform:none;box-shadow:none}
+.visualizer-item{padding:10px;border-radius:10px;color:var(--muted);transition:all 140ms ease}
+.visualizer-item:hover{background:rgba(255,255,255,0.02);color:#fff;transform:translateX(4px)}
+
+
